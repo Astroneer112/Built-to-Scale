@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerbodyScript : MonoBehaviour
 {
     public float thrust = 10f;
+    public float scale = 1f;
 
 
     // Start is called before the first frame update
@@ -39,6 +40,18 @@ public class PlayerbodyScript : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.E)){
             transform.Rotate(0,0.1f,0);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha1)){
+            scale = 1f;
+            transform.localScale = new Vector3(scale,scale,scale);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha2)){
+            scale = 3f;
+            transform.localScale = new Vector3(scale,scale,scale);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha3)){
+            scale = 5f;
+            transform.localScale = new Vector3(scale,scale,scale);
         }
     }
 }
